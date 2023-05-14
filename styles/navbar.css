@@ -1,0 +1,242 @@
+.navbar {
+  width: 100vw;
+  height: 4rem;
+  background-color: var(--color-white);
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Poppins";
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 0rem 7rem;
+  user-select: none;
+  box-shadow: 0 0 1px 1px rgba(29, 17, 51, 0.04),
+    0 0 3px 2px rgba(9, 32, 77, 0.12), 0 0 2px -3px rgba(29, 17, 51, 0.12);
+}
+
+.navbar-cont-1 {
+  display: flex;
+  column-gap: 2.5rem;
+}
+
+.navbar-item-1 a {
+  color: var(--color-black);
+  text-decoration: none;
+  position: relative;
+  display: flex;
+  column-gap: 0.25rem;
+  justify-content: space-between;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.navbar-logo img {
+  width: 2.75rem;
+  height: 2.75rem;
+}
+
+.navbar-space-cont-2 {
+  position: absolute;
+  padding-top: 2rem;
+  width: 14rem;
+}
+
+.navbar-cont-2 {
+  background-color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.25rem;
+  padding: 1.25rem 0rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 0 1px 1px rgba(29, 17, 51, 0.04),
+    0 0 3px 2px rgba(9, 32, 77, 0.12), 0 0 2px -3px rgba(29, 17, 51, 0.12);
+}
+
+.navbar-item-2 {
+  padding: 0rem 1rem;
+  position: relative;
+}
+
+.navbar-item-2 a {
+  display: block;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.5rem;
+  display: flex;
+  column-gap: 0.25rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-space-cont-3 {
+  position: absolute;
+  top: -1.25rem;
+  width: 14rem;
+  left: 14rem;
+  padding-left: 0.75rem;
+}
+
+.navbar-cont-3 {
+  background-color: var(--color-white);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.25rem;
+  padding: 1.25rem 0rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 0 1px 1px rgba(29, 17, 51, 0.04),
+    0 0 3px 2px rgba(9, 32, 77, 0.12), 0 0 2px -3px rgba(29, 17, 51, 0.12);
+}
+
+.navbar-item-3 {
+  padding: 0rem 1rem;
+}
+
+.navbar-item-3 a {
+  display: block;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.navbar-dropdown-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  fill: var(--color-black);
+}
+
+.navbar-hamburger {
+  display: initial;
+  cursor: pointer;
+  width: 2rem;
+  height: 2rem;
+}
+
+.navbar-hide {
+  top: -10rem;
+}
+
+.longDiv {
+  height: 200vh;
+  width: 100vw;
+}
+
+.navbar-cont-1.navbar-none,
+.navbar-space-cont-2.navbar-none,
+.navbar-space-cont-3.navbar-none {
+  display: none;
+}
+
+@media only screen and (max-width: 1023px) {
+  .navbar {
+    position: relative;
+    padding: 0rem 3rem;
+  }
+
+  .navbar-cont-1 {
+    display: block;
+    position: absolute;
+    width: 100vw;
+    top: 4rem;
+    left: 0rem;
+    background-color: var(--color-primary);
+  }
+
+  .navbar-item-1 a {
+    color: var(--color-white);
+    padding: 1.25rem 2rem;
+  }
+
+  .navbar-cont-2 {
+    display: block;
+    position: relative;
+    padding: 0rem;
+    border-radius: 0;
+    background-color: var(--color-primary-light-25);
+  }
+
+  .navbar-space-cont-2 {
+    display: block;
+    position: relative;
+    padding-top: 0rem;
+    width: 100vw;
+  }
+
+  .navbar-item-2 {
+    padding: 0rem 0rem;
+  }
+
+  .navbar-space-cont-3 {
+    display: block;
+    position: relative;
+    top: 0rem;
+    width: 100vw;
+    left: 0rem;
+    padding-left: 0rem;
+  }
+
+  .navbar-cont-3 {
+    background-color: var(--color-primary-light-50);
+    row-gap: 0rem;
+    padding: 0rem 0rem;
+    border-radius: 0rem;
+  }
+
+  .navbar-item-3 {
+    padding: 0rem 0rem;
+  }
+
+  .navbar-dropdown-icon {
+    fill: var(--color-white);
+  }
+
+  @media only screen and (min-width: 768px) {
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .navbar-hover:after {
+    content: "";
+    position: absolute;
+    background-color: var(--color-primary);
+    height: 0.25rem;
+    width: 0%;
+    left: 0;
+    bottom: -0.4rem;
+    border-radius: 5rem;
+  }
+
+  .navbar-hamburger {
+    display: none;
+  }
+
+  .navbar-space-cont-2 {
+    visibility: hidden;
+  }
+
+  .navbar-space-cont-3 {
+    visibility: hidden;
+  }
+
+  .navbar-item-1:hover .navbar-space-cont-2 {
+    visibility: visible;
+  }
+
+  .navbar-item-2:hover .navbar-space-cont-3 {
+    visibility: visible;
+  }
+
+  .navbar-hover {
+    cursor: default;
+  }
+
+  .navbar-item-1:hover > .navbar-hover:after,
+  .navbar-item-2:hover > .navbar-hover:after,
+  .navbar-hover:hover:after {
+    width: 100%;
+  }
+
+  .navbar-click:hover {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+  }
+}
